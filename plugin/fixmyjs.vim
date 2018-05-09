@@ -82,6 +82,8 @@ func! Fixmyjs(...)
       endif
     elseif g:fixmyjs_engine == 'eslint'
       call system(l:executable." --fix ".path)
+    elseif g:fixmyjs_engine == 'eslint_d'
+      call system(l:executable." --fix ".path)
     elseif g:fixmyjs_engine == 'jscs'
       call system(l:executable." --fix ".path)
     elseif g:fixmyjs_engine == 'tslint'
